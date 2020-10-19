@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.header{
+  text-align: center;
+}
+body {
+  font-size: 20px;
+  color: black;
+  background-image: url(178393.jpg);
+  padding: 10px;
+}
+
+menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  border: 10px dotted rgb(252, 190, 221);
+  background-clip: padding-box;
+  background-color: rgb(65, 21, 168);
+  background-image: linear-gradient(to right, rgb(236, 185, 74) , white);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(7, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.foott {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border:none;
+  text-align: center;
+  padding: 8px;
+}
+
+li a:hover {
+  background-color: rgb(245, 230, 16);
+}
+
+.form{
+  margin-left: 0%;
+  background-color: burlywood;
+}
+
+.active {
+  background-color: #cf7119;
+}
+.footer { 
+  color: black;
+  background-clip: padding-box;
+  background-color: burlywood;
+  padding: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+ 
+    <div class = "header">
+        <img src="Logo.png" alt="Space" width="400" height="345">
+      </div>
+  
+
+<menu>
+  <li><a class="active" href="index.html">index</a></li>
+  <li><a href="About Us.html">About Us</a></li>
+  <li><a href="Contact.html">Contact Us</a></li>
+  <li><a href="Event.html">Events</a></li>
+  <li><a href="Registration.html">Registration</a></li>
+</menu>
+
+<table class="form">
+  <tr>
+    <td>Form Registration</td>
+  </tr>
+  <tr>
+    <td>Nama:</td>
+    <td><input type="text" name="txtnama" id="txtnama"></td>
+  </tr>
+  <tr>
+    <td>Email:</td>
+    <td><input type="text" name="txtemail" id="txtemail"></td>
+  </tr>
+  <tr>
+    <td>No telp:</td>
+    <td><input type="text" name="txttelp" id="txttelp"></td>
+  </tr>
+  <tr>
+    <td>Alamat:</td>
+    <td><input type="text" name="txtalamat" id="txtalamat"></td>
+  </tr>
+  <td>Tanggal Lahir   :</td>
+        <td><input type="date" name="txtdate" id="txtdate" max="2020-12-31"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button id="btn1" onclick="simpan()">Submit</button></td>
+      </tr>
+
+</table>
+
+<h4>&#9825;&#9825;Thank You for Registration&#9825;&#9825;</h4>
+<img src="178394.gif" width="200" height="150">
+
+  
+<div class="footer">
+  <table class="foott">
+    <tr>
+      <th><img src="1602911518611.png" style="float:left; width="100" height="95"></th>
+      <th><img src="179018.gif" style="float:right; width="100" height="85"></th>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
+<script>
+function simpan(){
+  var nama  = document.getElementById("txtnama").value;
+  var email  = document.getElementById("txtemail").value;
+  var notelp  = document.getElementById("txttelp").value;
+  var alamat  = document.getElementById("txtalamat").value;
+  var tgl  = document.getElementById("txtdate").value;
+
+  var hasil  = nama + "\n" +email +"\n"+notelp +"\n"+alamat +"\n"+tgl +"\n"; 
+  alert(hasil+"\n"+"\n"+"Terima kasih telah bergabung, tanggapan anda sudah diterima");
+} 
+</script>
